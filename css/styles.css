@@ -933,6 +933,7 @@ img {
 
 .label-modal-user-agreement > a {
   color: var(--accent-color);
+  text-decoration-skip-ink: none;
 }
 
 .modal-window-submit-button {
@@ -951,7 +952,8 @@ img {
 }
 .input-modal-user-agreement:hover,
 .modal-window-submit-button:hover,
-.label-modal-user-agreement {
+.label-modal-user-agreement:hover,
+.footer-email-submit-button:hover {
   cursor: pointer;
 }
 
