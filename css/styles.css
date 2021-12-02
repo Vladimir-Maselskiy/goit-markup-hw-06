@@ -111,7 +111,7 @@ img {
 
 .icon-header {
   margin-right: 10px;
-  fill: #757575;
+  fill: currentColor;
 }
 
 .icon-envelope {
@@ -136,7 +136,6 @@ img {
 }
 .header-left-item,
 .header-right-item {
-  color: var(--second-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -165,7 +164,7 @@ img {
 }
 
 .header-right-link {
-  color: inherit;
+  color: var(--second-text-color);
   padding-top: 32px;
   padding-bottom: 32px;
   transition-property: color, fill;
@@ -192,7 +191,6 @@ img {
 .header-right-link:focus,
 .header-right-link:hover {
   color: var(--accent-color);
-  fill: var(--accent-color);
 }
 
 /* ----------MAIN--------------- */
@@ -304,6 +302,18 @@ img {
   position: relative;
 }
 
+.feature-images-title-box {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 70px;
+  left: 0px;
+  bottom: 0px;
+  background: rgba(47, 48, 58, 0.8);
+  align-items: center;
+  justify-content: center;
+}
+
 .feature-images-title {
   font-weight: bold;
   font-size: 14px;
@@ -312,13 +322,6 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--third-text-color);
-  padding-top: 27px;
-  position: absolute;
-  width: 100%;
-  height: 70px;
-  left: 0px;
-  bottom: 0px;
-  background: rgba(47, 48, 58, 0.8);
 }
 
 /* --------ABOUT-------------------------- */
@@ -353,9 +356,8 @@ img {
   margin-right: 0;
 }
 
-.team-list div {
-  padding-top: 30px;
-  padding-bottom: 30px;
+.team-list > li > div {
+  padding: 30px 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -384,12 +386,11 @@ img {
   align-items: center;
   text-align: right;
   background-color: transparent;
-  padding: 0 32px;
 }
 .icon-developer {
   width: 20px;
   height: 20px;
-  fill: inherit;
+  fill: currentColor;
 }
 
 .developers-contact-link {
@@ -399,8 +400,8 @@ img {
   border-radius: 50%;
   align-items: center;
   justify-content: center;
-  fill: #afb1b8;
-  transition-property: background-color, fill;
+  color: #afb1b8;
+  transition-property: background-color, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -408,7 +409,7 @@ img {
 .developers-contact-link:hover,
 .developers-contact-link:focus {
   background-color: var(--accent-color);
-  fill: var(--third-text-color);
+  color: var(--third-text-color);
 }
 
 .developers-contact-item {
@@ -439,21 +440,21 @@ img {
   justify-content: center;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  fill: #afb1b8;
-  transition-property: border, fill;
+  color: #afb1b8;
+  transition-property: border, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-clients {
   width: 106px;
   height: 60px;
-  fill: inherit;
+  fill: currentColor;
 }
 
 .clients-link:hover,
 .clients-link:focus {
   border: 1px solid var(--accent-color);
-  fill: var(--accent-color);
+  color: var(--accent-color);
   cursor: pointer;
 }
 
@@ -868,13 +869,9 @@ img {
   border-radius: 4px;
 }
 
-.input-modal-name:hover,
 .input-modal-name:focus,
-.input-modal-tel:hover,
 .input-modal-tel:focus,
-.input-modal-email:hover,
 .input-modal-email:focus,
-.textarea-feedback-modal:hover,
 .textarea-feedback-modal:focus {
   outline: none;
   cursor: pointer;
@@ -889,8 +886,7 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-input-wrapper:hover .modal-input-icon,
-.modal-input-wrapper:focus .modal-input-icon {
+.modal-input-wrapper:focus-within .modal-input-icon {
   color: var(--accent-color);
 }
 
@@ -921,14 +917,32 @@ img {
 }
 .user-agreement-block {
   display: flex;
+  position: relative;
   margin-bottom: 30px;
+  align-items: center;
 }
 .label-modal-user-agreement {
+  padding-left: 37px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--second-text-color);
   margin-left: 7px;
+}
+
+.custom-checkbox {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  width: 16px;
+  height: 15px;
+  transform: translateY(-50%);
+  background-image: url(../img/Vector.svg);
+}
+
+.input-modal-user-agreement:checked + .custom-checkbox {
+  background-image: url(../img/icon-check.svg);
+  background-size: contain;
 }
 
 .label-modal-user-agreement > a {

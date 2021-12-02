@@ -132,19 +132,25 @@
             <li>
               <div class="feature-images-box">
                 <img width="370" src="./img/box1.jpg" alt="Разработчик пишет код" />
-                <p class="feature-images-title">Десктопные приложения</p>
+                <div class="feature-images-title-box">
+                  <p class="feature-images-title">Десктопные приложения</p>
+                </div>
               </div>
             </li>
             <li>
               <div class="feature-images-box">
                 <img width="370" src="./img/box2.jpg" alt="Создаем мобильные приложения" />
-                <p class="feature-images-title">Мобильные приложения</p>
+                <div class="feature-images-title-box">
+                  <p class="feature-images-title">Мобильные приложения</p>
+                </div>
               </div>
             </li>
             <li>
               <div class="feature-images-box">
                 <img width="370" src="./img/box3.jpg" alt="Цветовая палитра" />
-                <p class="feature-images-title">Дизайнерские решения</p>
+                <div class="feature-images-title-box">
+                  <p class="feature-images-title">Дизайнерские решения</p>
+                </div>
               </div>
             </li>
           </ul>
@@ -485,15 +491,15 @@
           ></textarea>
 
           <div class="user-agreement-block">
-            <input
-              type="checkbox"
-              name="user-agreement"
-              id="user-agreement"
-              class="input-modal-user-agreement"
-            />
-            <label for="user-agreement" class="label-modal-user-agreement"
+            <label class="label-modal-user-agreement"
               >Соглашаюсь с рассылкой и принимаю
               <a href="">Условия договора</a>
+              <input
+                type="checkbox"
+                name="user-agreement"
+                class="input-modal-user-agreement visually-hidden"
+              />
+              <span class="custom-checkbox"></span>
             </label>
           </div>
           <button type="submit" class="modal-window-submit-button">
