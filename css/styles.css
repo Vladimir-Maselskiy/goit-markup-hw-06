@@ -932,19 +932,26 @@ img {
 
 .custom-checkbox {
   position: absolute;
+  display: block;
   top: 50%;
   left: 14px;
   width: 16px;
   height: 15px;
   transform: translateY(-50%);
-  background-image: url(../img/Vector.svg);
+  border: 2px solid #000000;
+  border-radius: 2px;
+  /* background-image: url(../img/Vector.svg); */
 }
 
 .input-modal-user-agreement:checked + .custom-checkbox {
   background-image: url(../img/icon-check.svg);
   background-size: contain;
+  border: none;
 }
 
+.input-modal-user-agreement:focus:not(:checked) + .custom-checkbox {
+  border: 2px solid var(--accent-color);
+}
 .label-modal-user-agreement > a {
   color: var(--accent-color);
   text-decoration-skip-ink: none;
