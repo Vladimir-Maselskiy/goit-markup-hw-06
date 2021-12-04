@@ -4,5 +4,6 @@
   "editor.formatOnPaste": true,
   "prettier.requireConfig": true,
   "prettier.tabWidth": 3,
-  "prettier.useTabs": true
+  "prettier.useTabs": true,
+  "liveServer.settings.port": 5501
 }
